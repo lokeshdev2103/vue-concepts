@@ -1,0 +1,37 @@
+<template>
+  <div>
+    <button @click="toggle">Toggle Visibility</button>
+    <p v-show="isVisible">This is toggled by v-show</p>
+  </div>
+  <div>
+    <p v-if="isVisible">Visible Content</p>
+    <p v-else>Not Visible</p>
+  </div>
+</template>
+
+<script>
+  import { ref } from "vue";
+
+  export default {
+    setup() {
+      const isVisible = ref(true);
+      const toggle = () => {
+        isVisible.value = !isVisible.value;
+      };
+      return { isVisible, toggle };
+    },
+  };
+</script>
+
+<!--
+Difference Between v-if and v-show 
+
+v-if : 
+Element is added/removed from the DOM.
+
+v-show : 
+Element is always in the DOM.
+
+
+
+-->
