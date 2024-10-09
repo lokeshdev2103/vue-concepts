@@ -1,25 +1,17 @@
-<script lang="ts">
-import textBinding from "./components/Bindings/dataBinding.vue";
-import classandstyleBinding from "./components/Bindings/classandstyleBinding.vue";
-import vModel from "./components/directives/vModel.vue";
+<script setup lang="ts">
+import ifCondition from './components/Conditional Rendering/ifCondition.vue';
+import vShow from './components/Conditional Rendering/vShow.vue';
+import forLoop from './components/Conditional Rendering/forLoop.vue'
+import ComputedProperty from './components/ComputedProperty.vue';
 
-export default {
-  components: {
-    textBinding,
-    classandstyleBinding,
-    vModel,
-  },
-  setup() {
-    return {};
-  },
-};
 </script>
 
 <template>
   <div>
-    <textBinding />
-    <classandstyleBinding />
-    <vModel />
-  </div>
+    <ifCondition />
+    <vShow />
+    <forLoop />
+    <ComputedProperty />
+  </div>  
 </template>
 
